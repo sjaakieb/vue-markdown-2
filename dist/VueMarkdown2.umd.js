@@ -1,5 +1,14 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["VueMarkdown2"] = factory();
+	else
+		root["VueMarkdown2"] = factory();
+})((typeof self !== 'undefined' ? self : this), function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -22163,12 +22172,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"cb29a978-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=42bb1a4e&
-var Appvue_type_template_id_42bb1a4e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._t("default")],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"cb29a978-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=2206aeb3&
+var Appvue_type_template_id_2206aeb3_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=42bb1a4e&
+// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=2206aeb3&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es7.symbol.async-iterator.js
 var es7_symbol_async_iterator = __webpack_require__("ac4d");
@@ -22260,6 +22269,7 @@ var markdown_it_task_lists_default = /*#__PURE__*/__webpack_require__.n(markdown
 
 /* harmony default export */ var Appvue_type_script_lang_js_ = ({
   md: new markdown_it_default.a(),
+  name: 'VueMarkdown2',
   data: function data() {
     return {
       sourceData: this.source
@@ -22614,7 +22624,7 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   src_Appvue_type_script_lang_js_,
-  Appvue_type_template_id_42bb1a4e_render,
+  Appvue_type_template_id_2206aeb3_render,
   staticRenderFns,
   false,
   null,
@@ -23564,4 +23574,5 @@ module.exports = function deflist_plugin(md) {
 /***/ })
 
 /******/ })["default"];
-//# sourceMappingURL=vue-markdown.common.js.map
+});
+//# sourceMappingURL=VueMarkdown2.umd.js.map

@@ -1,17 +1,56 @@
+<!DOCTYPE html>
 <meta charset="utf-8">
-<title>vue-markdown demo</title>
+<title>VueMarkdown2 demo</title>
 <script src="https://unpkg.com/vue"></script>
-<script src="./vue-markdown.umd.js"></script>
-<link rel="stylesheet" href="./vue-markdown.css">
+<script src="./VueMarkdown2.umd.js"></script>
+<link rel="stylesheet" href="./VueMarkdown2.css">
+<link rel="stylesheet" href="https://unpkg.com/katex@0.6.0/dist/katex.min.css">
 
 <div id="app">
-  <demo></demo>
+  <demo :source="md"></demo>
+  <demo>
+      # h1 Heading 8-)
+      ## h2 Heading
+      ### h3 Heading
+      #### h4 Heading
+      ##### h5 Heading
+      ###### h6 Heading
+  </demo>
 </div>
 
 <script>
+Vue.use(VueMarkdown2);
 new Vue({
+  el: '#app',
   components: {
-    demo: vue-markdown
+    demo: VueMarkdown2
+  },
+  data(){
+    return {
+      md: `
+      ---
+      __Advertisement :)__
+      
+      - __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
+        resize in browser.
+      - __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
+        i18n with plurals support and easy syntax.
+      
+      You will like those projects!
+      
+      ---
+      
+      # h1 Heading 8-)
+      ## h2 Heading
+      ### h3 Heading
+      #### h4 Heading
+      ##### h5 Heading
+      ###### h6 Heading
+      
+      
+      ## Horizontal Rules      
+      `
+    }
   }
 }).$mount('#app')
 </script>
