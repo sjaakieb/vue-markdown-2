@@ -17,7 +17,7 @@ import tasklists from 'markdown-it-task-lists'
 
 export default {
   md: new MarkdownIt(),
-
+  name: 'vue-markdown-2',
   data () {
     return {
       sourceData: this.source
