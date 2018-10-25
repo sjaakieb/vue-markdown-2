@@ -1,11 +1,17 @@
 {
   "name": "vue-markdown-2",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-markdown ",
     "lint": "vue-cli-service lint"
   },
+  "main": "dist/vue-markdown.common.js",
+  "module": "dist/vue-markdown.umd.js",
+  "files": [
+    "dist/vue-markdown.common.js",
+    "dist/vue-markdown.umd.js",
+    "src"
+  ],
   "dependencies": {
     "highlight.js": "^9.13.1",
     "markdown-it": "^6.0.1",
@@ -25,7 +31,9 @@
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-plugin-eslint": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
-    "@vue/eslint-config-standard": "^3.0.5",
+    "@vue/eslint-config-standard": "^3.0.5"
+  },
+  "peerDependencies": {
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
